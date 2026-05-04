@@ -9,6 +9,31 @@
 
 ---
 
+## Bối cảnh chung
+
+Bạn đang đóng vai Product Team cho nền tảng **BeeTutor Marketplace**.  
+Nhiệm vụ là chọn đúng khách hàng đầu tiên, xác định need thật, đề xuất chiến lược sản phẩm, và kiểm tra tính bền vững của mô hình doanh thu.
+
+**Giả định xuyên suốt bộ bài tập:**
+
+- Giá tham chiếu: 350.000đ/buổi 90 phút
+- Tần suất phổ biến: 2 buổi/tuần = 8 buổi/tháng
+- Đặt cọc: 50% trước khi bắt đầu gói học
+- Chính sách hoàn tiền theo tài liệu Day 16 BeeTutor
+
+---
+
+## Quy định làm bài
+
+- Ngôn ngữ: Tiếng Việt có dấu (riêng strategy statement có thể giữ tiếng Anh theo template).
+- Mỗi bài phải có phần **Lập luận** và phần **Kết luận**.
+- Mọi con số cần ghi rõ:
+  - **Fact** (có nguồn)
+  - **Assumption** (giả định)
+- Không trả lời chung chung, ưu tiên ví dụ vận hành cụ thể.
+
+---
+
 ## Bài 1 — Segment Card “đủ sắc”
 
 ### Yêu cầu
@@ -29,6 +54,33 @@
 
 - 01 bảng so sánh 2 segment.
 - 01 đoạn kết luận 120–180 từ.
+
+### Mẫu nộp nhanh
+
+```markdown
+## Bài 1
+
+### Segment A
+- Operational context:
+- Recurring workflow:
+- Pain moment:
+- Access path:
+
+### Segment B
+- Operational context:
+- Recurring workflow:
+- Pain moment:
+- Access path:
+
+### So sánh theo 4 tiêu chí
+- Specific:
+- Painful enough:
+- Operationally visible:
+- Reachable:
+
+### Segment ưu tiên & lý do
+...
+```
 
 ---
 
@@ -53,6 +105,27 @@
 - 01 bảng phân loại 6 phát biểu.
 - 03 thẻ need chi tiết.
 
+### Mẫu nộp nhanh
+
+```markdown
+## Bài 2
+
+| # | Phát biểu khách hàng | Phân loại | Giải thích ngắn |
+|---|---|---|---|
+| 1 | ... | FOMO/Feature/Need | ... |
+
+### Need 1 (JTBD)
+- When...
+- I want...
+- So I can...
+- Workaround hiện tại:
+- Pain signal:
+- Evidence/proxy evidence:
+
+### Need 2 ...
+### Need 3 ...
+```
+
 ---
 
 ## Bài 3 — Strategy Statement + Moat
@@ -73,6 +146,28 @@
 
 - 01 strategy statement hoàn chỉnh.
 - 02 moat options + lý do chọn.
+
+### Mẫu nộp nhanh
+
+```markdown
+## Bài 3
+
+For ...
+who struggle with ...
+our product helps them ...
+through ...
+unlike ...
+because we can leverage ...
+
+### Moat option 1
+...
+
+### Moat option 2
+...
+
+### Moat được chọn (12 tháng)
+...
+```
 
 ---
 
@@ -98,6 +193,14 @@
 - 01 bảng tính gói học.
 - 03 insight ngắn.
 
+### Mẫu bảng tính
+
+| Gói | Số buổi | Giá gốc | Mức giảm | Tổng thanh toán | Đợt 1 (50%) | Đợt 2 (50%) |
+|---|---:|---:|---:|---:|---:|---:|
+| 1 tháng | 8 |  | 0% |  |  |  |
+| 2 tháng | 16 |  | 3% |  |  |  |
+| 3 tháng | 24 |  | 6% |  |  |  |
+
 ---
 
 ## Bài 5 — Escrow & Revenue Split theo tier gia sư
@@ -120,6 +223,14 @@
 
 - 01 bảng so sánh 3 tier.
 - 01 đoạn kết luận 100–150 từ.
+
+### Mẫu bảng tính
+
+| Tier | Tổng khóa học | Tutor payout % | Gia sư nhận | Platform fee |
+|---|---:|---:|---:|---:|
+| FREE | 5.440.000 | 80% |  |  |
+| PRO | 5.440.000 | 90% |  |  |
+| PREMIUM | 5.440.000 | 92% |  |  |
 
 ---
 
@@ -144,6 +255,31 @@ Với mỗi case, cần chỉ rõ:
 
 - 03 mini-case tính toán chi tiết.
 - 02 rủi ro bị lạm dụng + 02 đề xuất vá chính sách.
+
+### Mẫu nộp nhanh
+
+```markdown
+## Bài 6
+
+### Case 1 — Hủy sau buổi 2
+- Đã thanh toán:
+- Đã học:
+- Hoàn cho học viên:
+- Gia sư nhận:
+- Platform giữ:
+
+### Case 2 — Hủy sau buổi 6
+...
+
+### Case 3 — Hủy sau buổi 10
+...
+
+### Rủi ro & đề xuất
+- Rủi ro 1:
+- Rủi ro 2:
+- Đề xuất 1:
+- Đề xuất 2:
+```
 
 ---
 
@@ -171,6 +307,16 @@ Với mỗi case, cần chỉ rõ:
 - 01 flow dạng bullet.
 - 01 bảng rule xử lý vận hành.
 
+### Mẫu bảng rule
+
+| Tình huống | Điều kiện kích hoạt | Hành động hệ thống | Trạng thái thanh toán |
+|---|---|---|---|
+| Trễ 10 phút |  |  |  |
+| Trễ 20 phút |  |  |  |
+| Trễ 30 phút |  |  |  |
+| Tutor no-show |  |  |  |
+| Learner no-show |  |  |  |
+
 ---
 
 ## Bài 8 — Roadmap theo phase và KPI
@@ -191,6 +337,12 @@ Với mỗi case, cần chỉ rõ:
 
 - 01 bảng: Feature | Phase | Why now | KPI.
 
+### Mẫu bảng roadmap
+
+| Feature | Phase | Why now | KPI |
+|---|---|---|---|
+| ... | MVP/Beta/Launch/Scale | ... | ... |
+
 ---
 
 ## Bài 9 — Metric Tree cho BeeTutor
@@ -207,6 +359,24 @@ Với mỗi case, cần chỉ rõ:
 
 - 01 sơ đồ metric tree dạng text.
 - 01 đoạn giải thích ngắn.
+
+### Mẫu metric tree (gợi ý)
+
+```text
+North-star: Completed paid sessions/month
+├─ Matching
+│  ├─ Match acceptance rate
+│  └─ Time-to-first-match
+├─ Booking
+│  ├─ Booking conversion rate
+│  └─ Deposit completion rate
+├─ Quality
+│  ├─ Session completion rate
+│  └─ Dispute rate
+└─ Retention
+   ├─ Month-2 retention
+   └─ Repeat booking rate
+```
 
 ---
 
@@ -227,6 +397,21 @@ Với mỗi case, cần chỉ rõ:
 
 - 01 tài liệu hoàn chỉnh tối đa 6 trang.
 
+### Cấu trúc file nộp gợi ý
+
+```markdown
+# Day 16 Submission — [Tên team hoặc cá nhân]
+
+## 1) Idea reframed
+## 2) Customer / Segment card
+## 3) Need map (2–3 needs)
+## 4) Strategy statement
+## 5) Moat hypothesis
+## 6) TAM / SAM / SOM (phiên bản đầu)
+## 7) Positioning note (2 câu)
+## 8) Self-assessment trước Day 17
+```
+
 ---
 
 ## Tiêu chí chấm điểm gợi ý (100 điểm)
@@ -239,6 +424,15 @@ Với mỗi case, cần chỉ rõ:
 
 ---
 
+## Rubric chi tiết theo mức đạt
+
+- **Xuất sắc (90–100):** Segment sắc, need có evidence rõ, strategy có lựa chọn rõ ràng, số liệu nhất quán, lập luận phản biện tốt.
+- **Tốt (80–89):** Đủ cấu phần chính, logic cơ bản tốt, còn thiếu chiều sâu ở moat/market sizing.
+- **Đạt (65–79):** Có nộp đủ phần nhưng còn mô tả chung chung, evidence yếu, số liệu chưa nhất quán.
+- **Chưa đạt (<65):** Nhầm lẫn need với feature, thiếu phần bắt buộc, thiếu kết nối từ segment đến strategy.
+
+---
+
 ## Gợi ý cách làm
 
 - Làm theo thứ tự: **Segment -> Need -> Strategy -> Economics -> Roadmap**.
@@ -247,4 +441,16 @@ Với mỗi case, cần chỉ rõ:
   - Fact (có nguồn)
   - Assumption (giả định)
 - Ưu tiên logic rõ ràng hơn con số “đẹp”.
+
+---
+
+## Checklist trước khi nộp
+
+- [ ] Đã chọn rõ 1 segment ưu tiên và nêu lý do.
+- [ ] Có 2–3 need viết theo JTBD, có workaround + evidence.
+- [ ] Strategy statement đủ 6 thành phần.
+- [ ] Có moat hypothesis và cơ chế tích lũy lợi thế.
+- [ ] Bài toán pricing/escrow/refund đã tính đúng và nhất quán.
+- [ ] Roadmap gắn với KPI đo được.
+- [ ] Có self-assessment trung thực trước Day 17.
 
