@@ -10,3 +10,4 @@ Repo này dùng cho quá trình thực hành **Track-1** tại chương trình *
 ## Bài tập đã thực hiện
 
 - Day 16: [Bài tập Ngày 16](./Day-16/Bai-tap-Ngay-16.md)
+- Day 18: [Sổ tay Ngày 18 — AI Financial Modeling & ROI](./Day-18/Day18-AI-Product-Handbook.md) · [BeeTutor Day 18 (Excel)](./Day-18/BeeTutor_Day18.xlsx)
