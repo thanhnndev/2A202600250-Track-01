@@ -18,3 +18,4 @@ Xem chi tiết tài liệu dự án: [BEETUTOR MARKETPLACE.md](./BEETUTOR-MARKET
 
 - Day 16: [Bài tập Ngày 16](./Day-16/Bai-tap-Ngay-16.md)
 - Day 18: [Sổ tay Ngày 18 — AI Financial Modeling & ROI](./Day-18/Day18-AI-Product-Handbook.md) · [BeeTutor Day 18 (Excel)](./Day-18/BeeTutor_Day18.xlsx)
+- Day 19: [Sổ tay Ngày 19 — Investor Buy-in & Pitch](./Day-19/Day19-AI-Product-Handbook.md) · [Pitch Memo](./Day-19/pitch_memo.md) · [Twitter Pitch](./Day-19/twitter_pitch.md) · [AI VC Critique Log](./Day-19/ai_vc_critique_log.md)
