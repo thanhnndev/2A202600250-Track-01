@@ -7,6 +7,13 @@ Repo này dùng cho quá trình thực hành **Track-1** tại chương trình *
 - Họ và tên: **Nông Nguyễn Thành**
 - MSSV: **2A202600250**
 
+## Dự án trọng tâm: BEETUTOR MARKETPLACE
+
+**"Nền tảng kết nối và hỗ trợ học tập thông minh"**
+Xem chi tiết tài liệu dự án: [BEETUTOR MARKETPLACE.md](./BEETUTOR-MARKETPLACE.md)
+
+---
+
 ## Bài tập đã thực hiện
 
 - Day 16: [Bài tập Ngày 16](./Day-16/Bai-tap-Ngay-16.md)
