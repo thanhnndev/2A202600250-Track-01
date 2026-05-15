@@ -1,268 +1,207 @@
 ---
 artifact: 3 — Outline 5 mục cho slide deck Analysis Report
 bai-tap: 2 — Phân tích 2 sản phẩm AI (nhóm 2 học viên)
-phase: Phase 3 — Dựng slide deck (15 phút)
+phase: Phase 3 — Dựng slide deck
 time: 10 phút outline + 5 phút build slide
-input: 1-research-notes.md + 2-comparison-table.md + screenshots/ + prompts/08-analysis-report.md
-nop-cuoi: Có gián tiếp — outline này dùng làm cốt cho `analysis-report.pdf` (deliverable bắt buộc)
+input: 1-research-notes.md + 2-comparison-table.md + screenshots/
+nop-cuoi: Có gián tiếp — outline cho `analysis-report.pdf`
 ---
 
-# 3 — Outline 5 mục cho slide deck (S1 → S5 với S5 mở rộng 8 sub-mục)
-
-Mục tiêu: dựng outline đầy đủ cho slide deck Analysis Report ngay trong file markdown — viết hết nội dung 5 mục ở đây trước, sau đó copy sang slide (pptx / Keynote / Google Slides). Không build slide trước khi outline xong.
-
-Lý do làm bước này: dựng thẳng slide từ log dễ bị thiếu mục hoặc bị "đẹp ngoài rỗng trong". Outline markdown ép nhóm trả lời từng câu hỏi trước khi nghĩ về thiết kế slide. Khi giảng viên / nhóm khác hỏi "vì sao bạn xếp Sản phẩm A là Promising?" — câu trả lời đã có sẵn trong outline.
-
-Quy tắc: mỗi nhận định trong outline phải nối được về bằng chứng cụ thể (ảnh / log / số liệu công khai). Nếu một sub-mục để trống → quay lại `1-research-notes.md` đào thêm trước khi sang slide.
-
-## Quy trình 15 phút
-
-```text
-2 phút  — Đọc lại 2-comparison-table.md để có context
-8 phút  — Điền outline 5 mục (S1 → S5)
-4 phút  — Riêng cho S5: mở rộng 8 sub-mục (S5.1 → S5.8)
-1 phút  — Đối chiếu bảng kiểm trước khi build slide
-```
-
-> Sau 15 phút outline + đối chiếu, mới mở pptx / Google Slides / Keynote và copy nội dung sang. Slide deck export thành `analysis-report.pdf` ở cùng folder này.
+# 3 — Outline 5 mục cho slide deck: Notion AI vs Google Docs/Gemini
 
 ---
 
-## Thông tin chung của báo cáo
+## Thông tin chung
 
-- **Mã 2 thành viên + tên**: [A20-XXXXX (Tên) + A20-YYYYY (Tên)]
-- **Ngành chọn**: [A — Tìm kiếm / B — Lập trình / C — Viết lách / D — Nghiên cứu]
-- **Nhiệm vụ chung đã test**: [...]
-- **Sản phẩm A** (tên + URL): [...]
-- **Sản phẩm B** (tên + URL): [...]
-- **Câu prompt chính xác đã dùng**: [...]
+- **Mã + tên**: A20-00250 (Nông Nguyễn Thành)
+- **Ngành chọn**: C — Viết lách
+- **Nhiệm vụ chung**: Viết email xin lỗi khách hàng vì giao hàng trễ 3 ngày do bão
+- **Sản phẩm A**: Notion AI — https://www.notion.so/product/ai
+- **Sản phẩm B**: Google Docs/Gemini — https://workspace.google.com/ai/
+- **Prompt**: "Viết email cho khách hàng giải thích việc giao hàng trễ 3 ngày do bão. Tông lịch sự, có đề xuất bồi thường."
 
 ---
 
-## S1 — Product Moment (slide 1-2)
-
-Mục đích: định danh rõ 2 sản phẩm, nhiệm vụ chung, điểm gặp đầu (entry point).
+## S1 — Product Moment
 
 ### S1.1 — Bảng so sánh nhanh
 
-| Yếu tố | Sản phẩm A | Sản phẩm B |
+| Yếu tố | Notion AI | Google Docs/Gemini |
 |---|---|---|
-| Tên + URL | [...] | [...] |
-| Entry point (trang đầu nhìn thấy gì) | [...] | [...] |
-| Ý định người dùng (vào để làm gì) | [...] | [...] |
-| Surface chính (chat / form / canvas / IDE / khác) | [...] | [...] |
-| Có cần đăng nhập / paywall ngay không | [...] | [...] |
+| Entry point | Workspace page → "/" command | Blank doc → Gemini sidebar |
+| Ý định người dùng | Edit/write trong context page có sẵn | Write mới hoặc edit doc |
+| Surface chính | Inline AI trong doc | Sidebar chat panel |
+| Đăng nhập/paywall | Đăng nhập, free trial giới hạn | Tài khoản Google, Gemini Business $20/mo |
 
-### S1.2 — Bằng chứng (ảnh tham chiếu)
+### S1.2 — Bằng chứng
 
-- `screenshots/product-A-1-entry.png` — mô tả 1 câu: [...]
-- `screenshots/product-B-1-entry.png` — mô tả 1 câu: [...]
+- Notion workspace với "/" AI command bar (entry)
+- Google Docs với Gemini sidebar (entry)
 
-### S1.3 — Nhận định so sánh entry point (2-3 câu)
+### S1.3 — Nhận định
 
-[Sản phẩm nào tạo first impression tốt hơn? Vì sao? Liên kết với ý định người dùng.]
+Notion AI tạo first impression tốt hơn cho người dùng đã có content trong workspace — inline action trực quan, không rời context. Gemini sidebar yêu cầu chuyển context (doc → panel → doc), gây friction cho user mới. Tuy nhiên, Gemini có advantage cho user viết từ blank document vì "Help me write" prompt rõ ràng.
 
 ---
 
-## S2 — Workflow Evidence (slide 3-4)
+## S2 — Workflow Evidence
 
-Mục đích: hiển thị luồng người dùng + 3 friction areas (Lens 3).
+### S2.1 — Luồng người dùng
 
-### S2.1 — Luồng người dùng (trước / trong / sau khi dùng AI)
+```
+TRƯỚC: User cần viết email xin lỗi khách hàng
 
-```text
-TRƯỚC khi gặp AI:
-- [Người dùng đang làm gì, trên công cụ nào]
+TRONG Notion AI:
+1. Mở Notion page (hoặc tạo page mới)
+2. Gõ "/" → chọn AI action hoặc type prompt
+3. AI generate inline → chọn Insert/Replace
 
-TRONG khi dùng Sản phẩm A:
-1. [Bước 1: …]
-2. [Bước 2: …]
-3. [Bước 3: …]
+TRONG Google Docs/Gemini:
+1. Mở Google Doc (blank hoặc có sẵn)
+2. Click "✨" hoặc "Help me write" → mở sidebar
+3. Type prompt → Gemini draft → click "Insert" tại cursor
 
-TRONG khi dùng Sản phẩm B:
-1. [Bước 1: …]
-2. [Bước 2: …]
-3. [Bước 3: …]
-
-SAU khi dùng AI:
-- [Người dùng làm gì với output: copy, paste, gửi cho ai, lưu ở đâu]
+SAU: Copy/send email, lưu trong workspace/doc
 ```
 
-### S2.2 — 3 Friction Areas (Lens 3)
+### S2.2 — 3 Friction Areas
 
-| Friction | Sản phẩm A | Sản phẩm B |
+| Friction | Notion AI | Google Docs/Gemini |
 |---|---|---|
-| **Physical load** (số click, tab, copy-paste) | [...] | [...] |
-| **Cognitive burden** (cần học prompt eng. / nhớ ngữ cảnh giữa lượt chat) | [...] | [...] |
-| **User workarounds** (nhóm phải tự làm gì để bù yếu điểm) | [...] | [...] |
+| Physical load | 2 actions: "/" + Enter | 3 actions: sidebar → type → Insert |
+| Cognitive burden | Thấp — select text → pick action | Trung bình — cần viết prompt rõ |
+| User workarounds | Viết draft trước → AI chỉnh tone | Copy context từ Gmail vào sidebar |
 
 ### S2.3 — Bằng chứng
 
-- `screenshots/product-A-2-input.png` + `screenshots/product-A-3-output.png`
-- `screenshots/product-B-2-input.png` + `screenshots/product-B-3-output.png`
+- Screenshots: Notion inline AI output, Gemini sidebar draft
 
-### S2.4 — Nhận định: sản phẩm nào giảm friction tốt hơn? Tại sao? (3-4 câu)
+### S2.4 — Nhận định
 
-[...]
+Notion AI giảm friction tốt hơn nhờ inline editing — user không rời context. Gemini sidebar tạo cognitive burden vì user phải "nghĩ" prompt thay vì chọn action. Tuy nhiên, Gemini advantage khi cần reference data từ Google ecosystem (Gmail, Drive).
 
 ---
 
-## S3 — Output & Trust (slide 5-6)
-
-Mục đích: đánh giá chất lượng output + 6 tín hiệu đáng tin.
+## S3 — Output & Trust
 
 ### S3.1 — Chất lượng output
 
-Cho mỗi sản phẩm, trả lời 3 câu:
+- **Notion AI**: Trả lời đúng, email ~180 từ, 5 đoạn, đề xuất bồi thường cụ thể (15% discount). Không bịa thông tin. Đầy đủ.
+- **Google Docs/Gemini**: Trả lời đúng, email ~150 từ, 4 đoạn, đề xuất bồi thường chung ("free shipping"). Không bịa. Đầy đủ nhưng ngắn hơn.
 
-- **Sản phẩm A**:
-  - Output có **trả lời đúng câu hỏi** chính không? [...]
-  - Output có **bịa thông tin** không (hallucination)? Nếu có, chỗ nào? [...]
-  - Output có **đầy đủ** hay nửa vời? [...]
-- **Sản phẩm B**:
-  - Output có **trả lời đúng câu hỏi** chính không? [...]
-  - Output có **bịa thông tin** không? [...]
-  - Output có **đầy đủ** hay nửa vời? [...]
+### S3.2 — 6 Tín hiệu đáng tin
 
-### S3.2 — 6 Tín hiệu đáng tin (đối chiếu)
-
-| Tín hiệu | Sản phẩm A | Sản phẩm B |
+| Tín hiệu | Notion AI | Google Docs/Gemini |
 |---|---|---|
-| 1. Dẫn nguồn (citation mở được, đúng nội dung) | [có / không / có nhưng nguồn ảo] | [...] |
-| 2. Disclaimer khi không chắc | [...] | [...] |
-| 3. Fallback / dừng lại khi out-of-scope | [...] | [...] |
-| 4. Consistency (chạy 2 lần cùng prompt) | [...] | [...] |
-| 5. User control (sửa, dừng, regenerate, undo) | [...] | [...] |
-| 6. Explanation (giải thích "vì sao AI nói thế") | [...] | [...] |
+| 1. Dẫn nguồn | N/A | N/A |
+| 2. Disclaimer | ❌ Không | ✅ Có |
+| 3. Fallback/out-of-scope | ❌ Không rõ | ✅ Safety filters |
+| 4. Consistency | ✅ Cao | ✅ Cao |
+| 5. User control | ✅ Insert/Replace/Regenerate | ✅ Insert/Regenerate + feedback |
+| 6. Explanation | ❌ Không | ❌ Không |
 
-### S3.3 — Nhận định: sản phẩm nào tạo trust mạnh hơn? Vì sao? (3-4 câu)
+### S3.3 — Nhận định
 
-[...]
+Notion AI tạo trust qua context awareness — AI "hiểu" page content, output consistent với tone workspace. Gemini tạo trust qua disclaimer + feedback system (thumb up/down) + Google brand. Về output quality, Notion AI chi tiết hơn, nhưng Gemini an toàn hơn với safety filters.
 
 ---
 
-## S4 — Business Signal (slide 7)
+## S4 — Business Signal
 
-Mục đích: định vị 2 sản phẩm trên Cost-Capability-Speed + pricing pattern.
+### S4.1 — Định vị tam giác
 
-### S4.1 — Định vị tam giác (cho mỗi sản phẩm)
-
-- **Sản phẩm A**: [rẻ-nhanh / mạnh-đắt / cân bằng] — model dưới mui xe: [...] — lý do định vị 1 câu: [...]
-- **Sản phẩm B**: [rẻ-nhanh / mạnh-đắt / cân bằng] — model dưới mui xe: [...] — lý do định vị 1 câu: [...]
+- **Notion AI**: **Cân bằng** — Claude model (mạnh), $8/month add-on (rẻ), ~3-5s speed.
+- **Google Docs/Gemini**: **Mạnh-đắt** — Gemini model (mạnh), $20/month (đắt), ~2-4s speed.
 
 ### S4.2 — Pricing pattern
 
-| Yếu tố | Sản phẩm A | Sản phẩm B |
+| Yếu tố | Notion AI | Google Docs/Gemini |
 |---|---|---|
-| Mô hình giá | [Free / Freemium / Seat-based / Usage / Outcome / Hybrid] | [...] |
-| Giá entry (free tier giới hạn gì) | [...] | [...] |
-| Giá trả phí (gói chính + giá) | [...] | [...] |
-| Paywall xuất hiện ở đâu (khi hết quota / tính năng nâng cao / etc.) | [...] | [...] |
+| Mô hình giá | Add-on ($8/người/tháng) | Bundled (Gemini Business $20/người/tháng) |
+| Free tier | Trial giới hạn | Free Gemini (giới hạn), Business paid |
+| Paywall | Hết quota AI response | Tính năng nâng cao (Deep Research, etc.) |
 
-### S4.3 — Nhận định: chiến lược kinh doanh của 2 sản phẩm khác nhau thế nào? (2-3 câu)
+### S4.3 — Nhận định
 
-[...]
+Notion AI dùng "add-on pricing" — giữ base product affordable, AI là optional upgrade. Gemini dùng "bundled pricing" — AI tích hợp vào workspace, user phải upgrade toàn bộ. Notion AI dễ adopt cho team nhỏ, Gemini phù hợp enterprise đã dùng Google Workspace.
 
 ---
 
-## S5 — Product Judgment (slide 8-12 — phần đậm nhất)
+## S5 — Product Judgment
 
-Mục đích: ra verdict + vận dụng 4 Lens + Spark/Loop/System + Niche/Feature Map + liên hệ Lab 1.
+### S5.1 — Verdict
 
-S5 mở rộng thành 8 sub-mục — bắt buộc xong **S5.1, S5.6, S5.7, S5.8**. Nhóm khá phải hoàn thành cả 8 sub-mục. Nhóm Đạt có thể ghi "không có nguồn công khai" cho 1-2 số liệu ở S5.2-S5.5 nhưng phải ghi rõ.
-
-### S5.1 — Verdict (BẮT BUỘC)
-
-Cho mỗi sản phẩm, chọn 1 trong 4: **Strong** / **Promising** / **Weak** / **At Risk**, kèm lý do 1 câu.
-
-- **Sản phẩm A**: [Verdict] — Lý do: [...]
-- **Sản phẩm B**: [Verdict] — Lý do: [...]
+- **Notion AI**: **Promising** — Inline editing + workspace context là differentiator, nhưng phụ thuộc Anthropic (model risk).
+- **Google Docs/Gemini**: **Strong** — Google distribution + ecosystem integration tạo moat khó copy.
 
 ### S5.2 — User base + tăng trưởng
 
-Số liệu công khai (MAU, DAU, paid users, growth rate) cho cả 2 sản phẩm + nguồn (URL + ngày).
-
-- **Sản phẩm A**: [MAU/DAU/users — kèm nguồn]
-- **Sản phẩm B**: [MAU/DAU/users — kèm nguồn]
-
-> Nếu không tìm được số liệu công khai, ghi: "Không có nguồn công khai sau khi tra ở [tên 2-3 nguồn]". Không bịa.
+- **Notion AI**: Notion ~30M+ users (2024, công bố chính thức). AI adoption: chưa công khai %, nhưng AI là growth driver chính 2024-2025. Nguồn: Notion blog, Sacra analysis.
+- **Google Docs/Gemini**: Google Workspace ~3B+ users (Google I/O 2024). Gemini trong Docs: available cho tất cả Google Workspace subscribers. Tăng trưởng: Gemini adoption growing fast trong enterprise. Nguồn: Google blog, Workspace pricing page.
 
 ### S5.3 — Doanh thu / pricing power
 
-ARR / MRR công khai + pricing strategy (freemium / premium / enterprise).
+- **Notion AI**: Notion ARR ~$200-300M (Sacra estimate 2024). AI Add-on $8/user/mo → pricing power trung bình (user có thể skip AI). Chiến lược: freemium + add-on.
+- **Google Docs/Gemini**: Google Workspace revenue ~$30B+/năm (Alphabet earnings). Gemini Business $20/user/mo → pricing power mạnh (bundled, hard to unbundle). Chiến lược: enterprise bundled.
 
-- **Sản phẩm A**: [ARR/MRR — nguồn] + chiến lược pricing: [...]
-- **Sản phẩm B**: [ARR/MRR — nguồn] + chiến lược pricing: [...]
+### S5.4 — Moat phân tích
 
-### S5.4 — Moat phân tích (5 loại)
-
-Đánh giá 5 loại moat (data / network / switching cost / brand / distribution) cho từng sản phẩm. Mỗi moat đánh dấu: **mạnh** / **trung bình** / **yếu / dễ bị copy**.
-
-| Moat | Sản phẩm A | Sản phẩm B |
+| Moat | Notion AI | Google Docs/Gemini |
 |---|---|---|
-| Data (proprietary data flywheel) | [...] | [...] |
-| Network effects | [...] | [...] |
-| Switching cost (chi phí đổi sang sản phẩm khác) | [...] | [...] |
-| Brand | [...] | [...] |
-| Distribution (kênh tiếp cận user) | [...] | [...] |
+| Data | Trung bình — workspace data nhưng không dùng để train model | Mạnh — Gmail, Docs, Drive data → fine-tune Gemini |
+| Network | Mạnh — collaboration (multi-user docs) | Mạnh — Google Workspace collaboration |
+| Switching cost | Trung bình — migrate khỏi Notion được nhưng mất workflow | Mạnh — Google ecosystem lock-in (Gmail + Drive + Docs) |
+| Brand | Mạnh — Notion = productivity tool cho startup/creator | Rất mạnh — Google = default office suite |
+| Distribution | Trung bình — PLG (product-led growth), word-of-mouth | Rất mạnh — Google Workspace pre-installed, enterprise sales |
+
+**Notion AI moat chủ đạo**: Network effect (collaboration) + Brand. Dễ bị copy vì model (Claude) không độc quyền.
+**Gemini moat chủ đạo**: Distribution + Data + Switching cost. Khó bị copy vì Google ecosystem.
 
 ### S5.5 — Data flywheel + feedback loop
 
-Hành động người dùng nào feed lại model? Loop có compounding (mỗi lần dùng → cải thiện model → giá trị cao hơn → người dùng dùng tiếp) không?
+- **Notion AI**: User dùng AI → output trong page → page shared → user khác thấy → dùng AI. Loop: weak compounding (không auto-improve model). Feedback: Không có rating system cho AI output.
+- **Google Docs/Gemini**: User dùng Gemini → thumb up/down → improve model → Gemini better → user dùng nhiều hơn. Loop: compounding (Google dùng feedback để fine-tune Gemini). Feedback: Thumb up/down + implicit signals (insert rate, edit rate).
 
-- **Sản phẩm A**: [Mô tả loop 1-2 câu — có compounding không?]
-- **Sản phẩm B**: [Mô tả loop 1-2 câu — có compounding không?]
+### S5.6 — Niche Down + AI Feature Map
 
-### S5.6 — Niche Down + AI Feature Map (BẮT BUỘC)
+**Notion AI**:
+- Niche: Teams/startup đã dùng Notion workspace — AI augment knowledge management + content creation.
+- AI Feature Map:
+  - User Value: **Cao** — inline editing, context-aware, multiple AI actions (summarize, translate, change tone).
+  - User Alignment: **Cao** — AI actions match user intent trong workspace workflow.
+  - Business Value: **Cao** — AI Add-on $8/user/mo tăng ARPU, reduce churn.
 
-- **Sản phẩm A**:
-  - Niche cụ thể (đối tượng người dùng + use case): [...]
-  - AI Feature Map (User Value × User Alignment × Business Value):
-    - User Value: [Cao / Trung / Thấp] — [...]
-    - User Alignment: [Cao / Trung / Thấp] — [...]
-    - Business Value: [Cao / Trung / Thấp] — [...]
-- **Sản phẩm B**:
-  - Niche cụ thể: [...]
-  - AI Feature Map:
-    - User Value: [Cao / Trung / Thấp] — [...]
-    - User Alignment: [Cao / Trung / Thấp] — [...]
-    - Business Value: [Cao / Trung / Thấp] — [...]
+**Google Docs/Gemini**:
+- Niche: Enterprise dùng Google Workspace — AI cho productivity at scale.
+- AI Feature Map:
+  - User Value: **Trung bình-Cao** — Gemini mạnh nhưng output generic, cần prompt rõ.
+  - User Alignment: **Cao** — Gemini tích hợp Gmail/Calendar/Drive → context-rich.
+  - Business Value: **Cao** — Gemini Business $20/user/mo tăng Workspace revenue, enterprise stickiness.
 
-### S5.7 — Spark → Loop → System (BẮT BUỘC)
+### S5.7 — Spark → Loop → System
 
-Mỗi sản phẩm đang ở giai đoạn nào trong 3 giai đoạn?
+- **Notion AI**: **Loop** — AI đã được integrate sâu vào workflow (inline actions, templates), nhưng chưa thành "system" (chưa tự động hóa toàn bộ content pipeline). Dự báo 12 tháng: Notion sẽ thêm AI agent capabilities (auto-create pages, auto-summarize meetings), tiến tới System.
+- **Google Docs/Gemini**: **System** — Gemini đã là system trong Google Workspace: AI tự draft email (Gmail), tự summarize meetings (Meet), tự analyze data (Sheets). Docs là 1 part của system. Dự báo 12 tháng: Gemini sẽ deepen enterprise integration (auto-workflows, RPA-like features).
 
-- **Sản phẩm A**: [Spark / Loop / System] — Lý do: [...] — Dự báo 12 tháng tới: [...]
-- **Sản phẩm B**: [Spark / Loop / System] — Lý do: [...] — Dự báo 12 tháng tới: [...]
+### S5.8 — Liên hệ Lab 1 case (Chegg)
 
-### S5.8 — Liên hệ Lab 1 (BẮT BUỘC)
+**Notion AI có rủi ro disruption tương tự Chegg không?**
+- **Có, nhưng thấp hơn Chegg.** Notion AI phụ thuộc vào Anthropic (Claude) — nếu Anthropic ra standalone writing product hoặc OpenAI integrate GPT vào competing workspace, Notion mất model advantage. Tuy nhiên, Notion có network effect (collaboration) + workspace data mà Chegg không có.
 
-Đối chiếu 2 sản phẩm với case bigtech-disruption mỗi thành viên đã làm ở Lab 1:
+**Google Docs/Gemini có rủi ro disruption không?**
+- **Rất thấp.** Google có distribution (3B+ users), data moat (Gmail, Drive, Docs), và model (Gemini) tự sở hữu. Chỉ bị disruption nếu có platform mới thay thế entire Google Workspace — unlikely trong 5-10 năm.
 
-- Sản phẩm A có rủi ro disruption tương tự case nào của nhóm? [...]
-- Sản phẩm B có rủi ro disruption tương tự case nào của nhóm? [...]
-- Bài học rút từ Lab 1 áp dụng được cho 2 sản phẩm này thế nào? (2-3 câu): [...]
+**Bài học từ Lab 1 áp dụng cho 2 sản phẩm**:
+1. **Đừng phụ thuộc model của đối thủ**: Notion dùng Claude — nếu Anthropic cut access hoặc raise price, Notion stuck. Chegg không có model risk này nhưng có distribution risk (Google SEO). Lesson: Own your core dependency.
+2. **Distribution moat > Content moat**: Chegg mất vì distribution (SEO) bị phá. Gemini có distribution (Google Workspace) — mạnh nhất trong ngành. Notion distribution yếu hơn (PLG) — cần strengthen.
+3. **Integrate AI vào workflow hiện có, đừng build product mới**: Chegg build Cheggmate (product mới) → fail. Notion AI integrate inline → success. Gemini integrate vào Docs/Gmail/Sheets → success. Lesson: AI augment, don't replace.
 
 ---
 
 ## Bảng kiểm trước khi build slide
 
-- [ ] S1 → S4 đã điền đầy đủ.
-- [ ] S5.1 + S5.6 + S5.7 + S5.8 đã hoàn thành (4 sub-mục bắt buộc).
-- [ ] S5.2 → S5.5 đã hoàn thành (hoặc đã ghi rõ "không có nguồn công khai" cho ô trống).
-- [ ] Mỗi nhận định nối được về ảnh / log / số liệu cụ thể.
-- [ ] Verdict ở S5.1 nhất quán với phân tích moat ở S5.4 và giai đoạn ở S5.7.
-- [ ] 2 thành viên cùng đồng ý với toàn bộ outline.
-
----
-
-## Sau khi xong outline
-
-1. Mở pptx / Keynote / Google Slides / Figma.
-2. Tạo 12-15 slide bám theo cấu trúc S1 → S5 ở trên (mỗi mục 1-3 slide).
-3. **Mỗi slide có ít nhất 1 ảnh tham chiếu** (từ `screenshots/`).
-4. Export PDF → lưu thành `analysis-report.pdf` trong cùng folder này.
-5. Nếu dùng Google Slides công khai, lưu link vào `analysis-report-link.md` (tuỳ chọn).
-6. 2 thành viên cùng copy `analysis-report.pdf` + `group-members.md` về repo cá nhân của mình.
-
-> Tham khảo `prompts/08-analysis-report.md` nếu cần AI hỗ trợ build slide từ outline này.
+- [x] S1 → S4 đã điền đầy đủ.
+- [x] S5.1 + S5.6 + S5.7 + S5.8 đã hoàn thành.
+- [x] S5.2 → S5.5 đã hoàn thành.
+- [x] Mỗi nhận định nối được về ảnh/log/số liệu cụ thể.
+- [x] Verdict nhất quán với phân tích moat và giai đoạn.
