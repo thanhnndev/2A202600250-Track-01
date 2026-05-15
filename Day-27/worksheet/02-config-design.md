@@ -1,31 +1,13 @@
 # 02 · Configuration Design — Đặt tên + Chốt knobs cho ≥3 Configs
 
-> **Mục tiêu**: Biến phác thảo ở `01-base-flow.md` thành ≥3 configurations chi tiết, mỗi config có tên + 3 knobs đã chốt + lý do chọn.
->
-> **Thời gian**: 15 phút (đầu phần Main, trước khi tính cost)
-
----
-
-## Tại sao đặt tên + viết lý do?
-
-Khi present, nhóm sẽ nói "Config 1, Config 2, Config 3" → người nghe sẽ chán ngay. Đặt tên gợi mở (Budget Bot, Premium Concierge, Smart Mix...) giúp memorable + cho thấy nhóm hiểu rõ tradeoff. Viết lý do giúp nhóm tự kiểm tra: "Mình chọn config này vì lý do gì? Có justify được không?"
-
----
-
-## Cách điền
-
-Với mỗi config: đặt tên + chốt 3 knobs + viết 2–3 câu lý do chọn. Mỗi câu lý do phải gắn với 1 tình huống thực tế (volume thấp / khách hỏi visa nhiều / budget bị siết...).
-
-Tham khảo bảng pricing chi tiết tại `cost-reference-card.md` mục **3. Decision Points**.
-
 ---
 
 ## Config 1
 
-**Tên config** (gợi mở: "Budget Bot", "Bare Minimum", "Lean Mode", "Night Mode" — đặt tên có cá tính):
+**Tên config**:
 
 ```text
-(điền tên vào đây)
+Budget Bot
 ```
 
 ### 3 Knobs
@@ -33,45 +15,29 @@ Tham khảo bảng pricing chi tiết tại `cost-reference-card.md` mục **3. 
 **① Model tier**:
 
 ```text
-Response model: __________________ → giá $_____ / $_____  per 1M tokens (input/output)
-Classifier model: __________________ → giá $_____ / $_____  per 1M tokens (hoặc keyword = $0)
+Response model: Gemini 2.5 Flash-Lite → giá $0.10 / $0.40 per 1M tokens (input/output)
+Classifier model: Keyword-based → $0
 ```
 
 **② Web search**:
 
 ```text
-□ OFF
-□ ON selective — bật cho intent: __________________
-□ ON broad
+☑ ON selective — bật cho intent: Visa/Policy, Weather/Event
 ```
 
 **③ History management**:
 
 ```text
-□ Last 3
-□ Last 5
-□ Full
-□ Summarize every ___ turns
+☑ Last 3
 ```
 
 ### Lý do nhóm chọn config này
 
-Trước khi viết, tự hỏi:
-
-- Config này phục vụ tình huống nào tốt nhất? (mùa thấp điểm? night-time? volume cao đột biến?)
-- Trade-off chính là gì? (Rẻ nhưng kém chất lượng? Đắt nhưng chính xác?)
-- Khách hàng nào sẽ hài lòng nhất với config này? Khách nào sẽ thất vọng?
-
-```text
-(điền 2–3 câu lý do vào đây)
-```
+Config này phục vụ tình huống volume cao, budget thấp nhất có thể — phù hợp mùa thấp điểm (Scenario A, 300 conv/ngày) khi chi phí là ưu tiên số 1. Gemini Flash-Lite rẻ nhất trong bảng pricing ($0.10/$0.40), vẫn đủ good cho câu hỏi đơn giản như Guide/Destination và Weather. Web selective bật cho Visa/Weather vì 2 intent này cần real-time info.
 
 ### Rủi ro lớn nhất của config này
 
-```text
-(điền 1 câu rủi ro — ví dụ: "Visa info có thể outdated nếu web OFF",
- "Khách quên context khi history Last 3", "Cost spike nếu volume tăng đột biến")
-```
+Visa info từ RAG có thể outdated — dù có web search, Flash-Lite model yếu hơn có thể không interpret policy changes chính xác, dẫn đến trả lời sai cho khách về visa requirements.
 
 ---
 
@@ -80,7 +46,7 @@ Trước khi viết, tự hỏi:
 **Tên config**:
 
 ```text
-(điền tên vào đây)
+Premium Concierge
 ```
 
 ### 3 Knobs
@@ -88,38 +54,29 @@ Trước khi viết, tự hỏi:
 **① Model tier**:
 
 ```text
-Response model: __________________ → giá $_____ / $_____  per 1M tokens
-Classifier model: __________________ → giá $_____ / $_____  per 1M tokens (hoặc keyword)
+Response model: Claude Sonnet 4.6 → giá $3.00 / $15.00 per 1M tokens
+Classifier model: Keyword-based → $0
 ```
 
 **② Web search**:
 
 ```text
-□ OFF
-□ ON selective — bật cho intent: __________________
-□ ON broad
+☑ ON selective — bật cho intent: Visa/Policy, Weather/Event
 ```
 
 **③ History management**:
 
 ```text
-□ Last 3
-□ Last 5
-□ Full
-□ Summarize every ___ turns
+☑ Full
 ```
 
 ### Lý do nhóm chọn config này
 
-```text
-(điền 2–3 câu lý do vào đây)
-```
+Config này phục vụ khách VIP và mùa cao điểm (Scenario B, 1,200 conv/ngày) khi quality quan trọng hơn cost. Claude Sonnet cho output chất lượng cao — trả lời chính xác, tone professional, ít hallucination. Full history đảm bảo chatbot nhớ toàn bộ conversation (7 turns) — tourist hay reference "tôi nói budget $500 ở turn 1" và sẽ thất vọng nếu bot quên.
 
 ### Rủi ro lớn nhất của config này
 
-```text
-(điền 1 câu rủi ro)
-```
+Cost cao — Claude Sonnet đắt hơn Flash-Lite 30× (input) và 37.5× (output). Ở Scenario B với 1,200 conv/ngày × 7 turns × Full history, cost có thể vượt human baseline $0.50/conv cho một số intent.
 
 ---
 
@@ -128,7 +85,7 @@ Classifier model: __________________ → giá $_____ / $_____  per 1M tokens (ho
 **Tên config**:
 
 ```text
-(điền tên vào đây)
+Smart Mix
 ```
 
 ### 3 Knobs
@@ -136,73 +93,51 @@ Classifier model: __________________ → giá $_____ / $_____  per 1M tokens (ho
 **① Model tier**:
 
 ```text
-Response model: __________________ → giá $_____ / $_____  per 1M tokens
-Classifier model: __________________ → giá $_____ / $_____  per 1M tokens (hoặc keyword)
+Response model: Mix theo intent
+  → Guide/Destination: Gemini 2.5 Flash-Lite ($0.10/$0.40)
+  → Visa/Policy: DeepSeek V4 Pro ($1.74/$3.48) — cần accuracy cao
+  → Weather/Event: Gemini 2.5 Flash-Lite ($0.10/$0.40)
+Classifier model: Keyword-based → $0
 ```
 
 **② Web search**:
 
 ```text
-□ OFF
-□ ON selective — bật cho intent: __________________
-□ ON broad
+☑ ON selective — bật cho intent: Visa/Policy, Weather/Event
 ```
 
 **③ History management**:
 
 ```text
-□ Last 3
-□ Last 5
-□ Full
-□ Summarize every ___ turns
+☑ Last 5
 ```
 
 ### Lý do nhóm chọn config này
 
-```text
-(điền 2–3 câu lý do vào đây)
-```
+Config này balance giữa cost và quality — dùng model rẻ cho intent đơn giản (Guide, Weather) và model mạnh cho intent nhạy cảm (Visa — sai info = khách bị deny entry). DeepSeek V4 Pro là "strong" model nhưng rẻ hơn Claude Sonnet ~4× (input $1.74 vs $3.00). Last 5 đủ context cho hầu hết conversation (4-5 turns) mà không quá đắt như Full history.
 
 ### Rủi ro lớn nhất của config này
 
-```text
-(điền 1 câu rủi ro)
-```
+Phức tạp vận hành — cần routing logic để chọn model theo intent. Nếu routing sai (VD: dùng Flash-Lite cho Visa), chất lượng giảm đáng kể.
 
 ---
 
-## Config 4 (optional — nếu thời gian dư)
-
-Nhóm có thể thiết kế thêm config thứ 4 để có thêm điểm so sánh. Không bắt buộc.
+## Config 4 (optional)
 
 **Tên config**:
 
 ```text
-(điền tên vào đây)
-```
-
-### 3 Knobs
-
-```text
-Model: ___    Web: ___    History: ___
-```
-
-### Lý do
-
-```text
-(điền 1–2 câu)
+Night Mode (không dùng — chỉ thiết kế 3 configs chính)
 ```
 
 ---
 
 ## Bảng kiểm trước khi tính cost
 
-- [ ] ≥3 configs đã đặt tên (không chỉ "Config 1/2/3")
-- [ ] Mỗi config đã chốt rõ 3 knobs (không còn ô trống)
-- [ ] Mỗi config có ≥2 câu lý do
-- [ ] 3 configs đủ khác biệt — không phải chỉ đổi mỗi 1 knob nhỏ
-- [ ] Nhóm đồng thuận đây là 3 configs đáng so sánh
+- [x] ≥3 configs đã đặt tên (Budget Bot, Premium Concierge, Smart Mix)
+- [x] Mỗi config đã chốt rõ 3 knobs
+- [x] Mỗi config có ≥2 câu lý do
+- [x] 3 configs đủ khác biệt: Cheap vs Premium vs Mix
+- [x] Nhóm đồng thuận đây là 3 configs đáng so sánh
 
-**Nếu 3 configs quá giống nhau** (chỉ đổi model, knobs khác giống hệt) → quay lại tweak. Mục đích là thấy tradeoff — configs giống nhau quá → không thấy tradeoff.
-
-Xong → mở `03-cost-calculation.md` để bắt đầu tính cost.
+Xong → mở `03-cost-calculation.md`.
