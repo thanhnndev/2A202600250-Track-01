@@ -1,12 +1,20 @@
 # 00 · User Journey Simulation — Đóng vai Tourist
 
 > **Mục tiêu**: Trước khi tính chi phí, nhóm phải hình dung được khách hàng thật sự hỏi gì, hỏi như thế nào, và 1 conversation thực tế trông ra sao.
+>
+> **Thời gian**: 8 phút (trong 15 phút phần Setup)
 
 ---
 
-## Bước 1 — Mỗi người đóng vai 1 tourist
+## Tại sao phải làm bước này?
 
-### Tourist #1 (Tên thành viên: Nông Nguyễn Thành — US solo traveler, first-time, budget $600)
+Nếu nhóm bắt đầu tính cost mà chưa biết tourist hỏi gì → mọi con số chỉ là lý thuyết. Bước này buộc nhóm "chạm" sản phẩm trước khi mở Excel.
+
+---
+
+## Bước 1 — Mỗi người đóng vai 1 tourist (4 phút)
+
+### Tourist #1 (Tên thành viên: Nông Nguyễn Thành — US, solo, first-time)
 
 ```text
 Do I need a visa on arrival for Vietnam as a US citizen?
@@ -17,7 +25,7 @@ How much should I budget per day for food and local transport?
 Can I pay with credit card widely or should I carry cash?
 ```
 
-### Tourist #2 (Tên thành viên: Nông Nguyễn Thành — UK couple, returning visitor, mid-range)
+### Tourist #2 (Tên thành viên: Nông Nguyễn Thành — UK couple, returning visitor)
 
 ```text
 We want a 7-day itinerary covering Hoi An and Da Nang. Any suggested plan?
@@ -28,7 +36,7 @@ Is it safe to eat street food if we have nut allergies?
 Do you have a guided tour for Ba Na Hills?
 ```
 
-### Tourist #3 (Tên thành viên: Nông Nguyễn Thành — Australian family of 4, first-time with kids)
+### Tourist #3 (Tên thành viên: Nông Nguyễn Thành — Australian family of 4)
 
 ```text
 We are a family of four with kids. What are kid-friendly activities in HCMC?
@@ -41,7 +49,7 @@ Is it raining a lot in HCMC this week?
 
 ---
 
-## Bước 2 — Gom lại và phân loại
+## Bước 2 — Gom lại và phân loại (4 phút)
 
 | # | Câu hỏi (1 dòng) | Intent thuộc loại nào | Cần bao nhiêu lượt chat để xong? | Bot trả lời hay chuyển người? |
 |---|---|---|---|---|
@@ -58,7 +66,7 @@ Is it raining a lot in HCMC this week?
 
 ---
 
-## Bước 3 — Rút insight cho nhóm
+## Bước 3 — Rút insight cho nhóm (cuối phần Setup)
 
 **Tổng số câu hỏi nhóm gom được**:
 
@@ -69,36 +77,31 @@ Is it raining a lot in HCMC this week?
 **Phân bố intent thực tế của nhóm** (% mỗi intent):
 
 ```text
-Guide/Destination: 30%
-Visa/Policy: 20%
-Weather/Event: 20%
-Tour/Booking: 20%
+Guide: 30%
+Visa: 20%
+Weather: 20%
+Booking: 20%
 Khiếu nại: 10%
 ```
 
 **Số lượt chat trung bình để xong 1 chủ đề**:
 
 ```text
-3-4 lượt cho info questions (visa, guide, weather)
-1 lượt cho booking/complaint (handoff ngay)
-Trung bình weighted: ~3 lượt
+3-4 lượt cho info questions, 1 lượt cho booking/complaint
 ```
 
 **Đối chiếu với đề bài** (Scenario A = 4 lượt, Scenario B = 7 lượt):
 
 ```text
 Scenario A (4 turns) khá sát với câu hỏi thông tin thực tế. Scenario B (7 turns)
-dài hơn — phản ánh tourist hay hỏi gộp nhiều intent trong 1 conversation (VD: hỏi
-visa → hỏi weather → hỏi itinerary trong cùng 1 chat).
+dài hơn — phản ánh tourist hay hỏi gộp nhiều intent trong 1 conversation.
 ```
 
 **Insight bất ngờ — điều gì nhóm chỉ hiểu sau khi đóng vai?**
 
 ```text
-Tourist thường hỏi gộp nhiều intent trong 1 cuộc trò chuyện. Booking/complaint
-thường rất ngắn (1 turn) và nên handoff sớm — không nên để AI cố trả lời.
-Câu hỏi visa tuy ngắn nhưng cần nhiều follow-up (passport type, duration, fee)
-nên actual conversation dài hơn dự kiến.
+Tourist thường hỏi gộp nhiều intent trong 1 cuộc trò chuyện.
+Booking/complaint thường rất ngắn và nên handoff sớm.
 ```
 
 ---
@@ -106,8 +109,8 @@ nên actual conversation dài hơn dự kiến.
 ## Bảng kiểm trước khi sang file tiếp theo
 
 - [x] Mỗi người trong nhóm đã viết ≥5 câu hỏi tourist
-- [x] Đã gom + phân loại intent cho ≥10 câu
-- [x] Đã có phân bố intent % của nhóm
+- [x] Đã gom + phân loại intent cho ≥10 câu (bảng trên)
+- [x] Đã có phân bố intent % của nhóm (so với đề bài)
 - [x] Có ít nhất 1 insight về cách tourist thật sự dùng chatbot
 
 Xong → mở `01-base-flow.md`.
