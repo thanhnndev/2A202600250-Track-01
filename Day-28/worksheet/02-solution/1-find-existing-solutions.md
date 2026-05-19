@@ -1,115 +1,59 @@
 ---
 artifact: 5 — Solution Approach (phần khám phá)
 bai-tap: Solution — tìm lời giải đã có sẵn trước khi tự xây
-phase: Double Diamond vòng 2 · ◇ giãn (mở hết lựa chọn, chưa chốt)
-time: ~8 phút (xem deck để biết khung giờ chính xác trong buổi)
-input: 01-frame/3-FINAL-problem-framing.md · 00-context.md · prompts/04-find-solutions.md
-nop-cuoi: Không — file trung gian (bản chốt ở 2-FINAL-solution.md)
+phase: Double Diamond vòng 2 · ◇ giãn
+input: 01-frame/3-FINAL-problem-framing.md · 00-context.md
+nop-cuoi: Không — file trung gian
 ---
 
-# 1 — Find existing solutions (đừng xây lại từ số 0)
+# 1 — Find existing solutions
 
-Mục tiêu: trước khi quyết Build / Buy / Boost / Partner, nhóm phải biết bài này đã có ai giải ở chỗ khác chưa, và họ giải bằng cách nào. Đây là nửa "giãn ra" của [Double Diamond](https://www.thefountaininstitute.com/blog/what-is-the-double-diamond-design-process) vòng 2 — mở hết các lời giải đang tồn tại, chưa chốt cái nào.
+## Bước 0 — Bài này thực ra là dạng bài gì?
 
-Lý do làm bước này: đây là chỗ nhiều nhóm hỏng mà không biết. Hỏng vì nhảy thẳng vào "tự build" cho oai, trong khi 80–90% nhu cầu nội bộ chỉ cần Boost hoặc Buy. Hỏng vì không hỏi "ai làm rồi" nên đi lại từ số 0. Gần như bài nào cũng đã có người giải ở một ngành khác — không thấy thì phí cả pilot.
-
-Quy tắc: **không có nguồn = giả định.** Mỗi cái AI/web nói ra, hỏi lại "lấy ở đâu?". Không chỉ được nguồn thì đánh dấu 🧮 (giả định để giảng), đừng xài như fact.
-
-## Bước 0 — Bài này thực ra là dạng bài gì? (2 phút)
-
-Bỏ context AI20k sang một bên. Mô tả Quick Win của nhóm như một bài toán chung — không có chữ "học viên / coach / Discord". Vài ví dụ cho dễ hình dung:
-
-- "câu hỏi của user → câu trả lời kèm nguồn" → đây là bài Q&A có citation
-- "một đống văn bản lộn xộn → data có cấu trúc" → bài extraction
-- "bài nộp → nhận xét theo rubric" → bài rubric grading
-
-Dạng bài (the pattern) đó gần như chắc chắn đã có người làm ở ngành khác. Tìm ra dạng bài → tìm ra người đã giải nó.
-
-- **Quick Win của nhóm, viết lại thành 1 dạng bài chung (không có chữ domain)**: [...]
-- **Input → output thực chất là gì**: [...] → [...]
-- **Ràng buộc không bỏ được (lấy từ `00-context.md`)**: [...]
-
-## Quy trình 8 phút
-
-```text
-2 phút  — Bước 0: gọi tên dạng bài
-4 phút  — Phần A: deep research 4 tầng "ai giải dạng bài này rồi"
-2 phút  — Phần B: rút về 2–3 hướng khả thi, đánh dấu nguồn
-```
-
----
+- **Quick Win, viết lại thành 1 dạng bài chung**: Từ một yêu cầu có cấu trúc và một tập hồ sơ ứng viên, hệ thống lọc điều kiện bắt buộc, xếp hạng mức phù hợp, rồi tạo shortlist có giải thích và nguồn để người review duyệt.
+- **Input → output thực chất là gì**: Yêu cầu người dùng + hồ sơ ứng viên → top 3 ứng viên phù hợp, lý do match/mismatch, flag dữ liệu thiếu, mức tự tin.
+- **Ràng buộc không bỏ được**: Privacy, không bịa thông tin, citation từ hồ sơ, human review trước khi gửi, budget nhỏ, chỉ pilot Toán THPT.
 
 ## Phần A — Deep research: ai giải dạng bài này rồi, giải sao?
 
-Không phải gõ 1 câu vào AI rồi chép. Chạy 4 tầng, **tầng sau lấy kết quả tầng trước làm input**. Khung câu lệnh ở `prompts/04-find-solutions.md`.
-
-Câu hỏi phụ (tự trả lời — viết ra cái nhóm *tìm thấy*, không phải cái nhóm *đoán*):
-
-- Dạng bài này giống bài nào ở một ngành hoàn toàn khác?
-- Hướng nào AI gợi ý mà nhóm **không kiểm được nguồn** — vậy có nên tin không?
-- Một ca thất bại của người đi trước dạy nhóm tránh đúng điều gì?
-- Nhóm "đi từ mức mấy" — kế thừa được gì để khỏi bắt đầu từ 0?
-
-### Trả lời — điền theo 4 tầng
-
 | Tầng | Hỏi AI/web câu gì | Tìm được gì | Nguồn / 🧮 nếu là giả định |
 |---|---|---|---|
-| 1 · Map | "Dạng bài [X] thường giải bằng những hướng nào? 4–6 hướng, mỗi hướng khi nào nên dùng." | [...] | |
-| 2 · Tiền lệ | "Đội nào (ngành bất kỳ) đã làm [X] ở quy mô tương tự? Họ làm cách nào?" | [...] | |
-| 3 · Phản chứng | "Ca nào làm [X] thất bại? Nguyên nhân gốc là cách làm hay chuyện khác?" | [...] | |
-| 4 · Thu hẹp | "Với ràng buộc [budget nhỏ · có người review · cần citation], hướng nào khả thi cho pilot 6 tuần?" | [...] | |
+| 1 · Map | "Candidate matching/ranking with explanations usually uses which approaches?" | Các hướng phổ biến: rule-based hard filter + weighted scoring; semantic matching bằng embedding; LLM rerank có explanation; hybrid retrieval + human review. | 🧮 Tổng hợp pattern sản phẩm AI phổ biến; cần kiểm bằng tài liệu vendor nếu làm thật |
+| 2 · Tiền lệ | "Which products shortlist candidates/tutors/jobs with explanations?" | Job boards/ATS, marketplace matching, recommendation systems và tutor platforms đều dùng profile fields + availability + price/rating + review. | 🧮 Lab assumption dựa trên pattern LinkedIn/ATS/marketplace; chưa dùng làm fact định lượng |
+| 3 · Phản chứng | "Why do matching recommenders fail?" | Fail khi dữ liệu hồ sơ thiếu/sai, ranking không giải thích được, tối ưu click thay vì fit thật, bias theo rating/giá, và người dùng không trust đề xuất. | 🧮 Pattern rủi ro đã biết; trong pilot chuyển thành guardrail |
+| 4 · Thu hẹp | "With small budget, human review, and citation, what works for a 6-week pilot?" | Không build recommender phức tạp. Làm hybrid: hard filter + weighted score + LLM explanation từ hồ sơ + ops review. | 🧮 Chọn theo ràng buộc lab và outline BEETUTOR |
 
----
-
-## Phần B — Rút về 2–3 hướng khả thi
-
-Câu hỏi phụ:
-
-- Hướng nào *kế thừa được nhiều nhất* từ người đã làm?
-- Hướng nào nghe hay nhưng nhóm **không có nguồn** để tin?
-
-### Trả lời
+## Phần B — Rút về 2-3 hướng khả thi
 
 | Hướng giải khả thi | Ai làm rồi (gần bài mình nhất) | Nguồn / 🧮 | Hợp ràng buộc `00-context`? |
 |---|---|---|---|
-| | | | Có / Không vì… |
-| | | | Có / Không vì… |
-| | | | Có / Không vì… |
+| Rule-based hard filter + weighted scoring | Marketplace/ATS cơ bản: lọc theo điều kiện bắt buộc rồi chấm điểm | 🧮 | Có, dễ giải thích, chi phí thấp, nhưng explanation có thể khô cứng |
+| Embedding/semantic match giữa nhu cầu và bio gia sư | Search/recommendation trên hồ sơ văn bản | 🧮 | Có một phần, nhưng rủi ro nếu bio thiếu chuẩn và khó giải thích hơn |
+| Hybrid Boost: filter + score + LLM viết lý do có nguồn + ops review | Internal copilots/review assistants | 🧮 | Có, hợp budget nhỏ và human review, không cần build platform lớn |
 
-**"Đi từ 5 lên" — nhóm kế thừa cụ thể cái gì** (1–2 câu):
+**"Đi từ 5 lên" — kế thừa cụ thể cái gì**:
 
 ```text
-[...]
+Kế thừa pattern đã quen của candidate matching: hard filters loại điều kiện bắt buộc, weighted score cho mức phù hợp, explanation để người dùng tin, và human review để kiểm rủi ro. Pilot không phát minh marketplace AI mới mà boost workflow shortlist hiện có.
 ```
-
----
 
 ## Phát hiện ban đầu
 
-Ghi nhanh 2–3 cái đáng chú ý nhất (chưa phải quyết định — quyết định ở file FINAL):
-
-- [...]
-- [...]
-- [...]
+- Hướng "AI tự chọn gia sư tốt nhất" quá rủi ro; nên giới hạn thành "AI đề xuất shortlist để ops duyệt".
+- Hard filter phải chạy trước LLM để tránh đề xuất người sai môn/sai lịch/sai ngân sách.
+- Explanation phải dựa vào field hồ sơ cụ thể, không viết chung chung kiểu "phù hợp với bạn".
 
 ## Câu hỏi mở (mang sang bước chốt)
 
-- [...]
-- [...]
-
----
+- Trọng số match nên do ai quyết: ops lead, product owner, hay học viên tự chỉnh?
+- Có nên cho AI giải thích cả lý do không chọn một số gia sư không?
+- Cần log gì để audit khi phụ huynh hoặc gia sư thắc mắc?
 
 ## Tổng kiểm tra trước khi sang `2-FINAL-solution.md`
 
 | Hạng mục | Xong? |
 |---|---|
-| Gọi được dạng bài trong 1 câu, không còn chữ domain | / |
-| Đủ 4 tầng deep research, tầng nào cũng có kết quả | / |
-| Mỗi kết quả có nguồn, hoặc đánh dấu 🧮 nếu là giả định | / |
-| Rút về 2–3 hướng + nói được "đi từ 5 lên" cái gì | / |
-
-Hàng nào chưa xong → quay lại Phần A, đừng sang bước chốt vội.
-
-Sau bước này, mở `2-FINAL-solution.md` — chốt Build/Buy/Boost/Partner + data & ai review + bản vẽ trực quan (đây là bản nộp của phase này).
-
-*Liên quan: handbook §A5 · `prompts/04-find-solutions.md` · `00-context.md`*
+| Gọi được dạng bài trong 1 câu, không còn chữ domain | Xong |
+| Đủ 4 tầng deep research, tầng nào cũng có kết quả | Xong |
+| Mỗi kết quả có nguồn hoặc đánh dấu giả định | Xong |
+| Rút về 2-3 hướng + nói được "đi từ 5 lên" | Xong |

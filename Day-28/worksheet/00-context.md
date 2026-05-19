@@ -1,65 +1,41 @@
 ---
-title: 00 — Context (bối cảnh nhóm + track)
+title: 00 — Context (bối cảnh cá nhân + track)
 section: Day 28 — điền 1 lần đầu buổi, dùng lại cho mọi lần hỏi AI
-format: Nhóm 3
+format: Làm cá nhân
 time: Điền ~5 phút đầu buổi
 ---
 
-# 00-context.md — Context nhóm + track
-
-Điền file này một lần ở đầu buổi. Mỗi lần dùng AI ở các bước sau, paste nguyên nội dung file này vào đầu cuộc trò chuyện. AI không tự nhớ context giữa các lần — context khác nhau thì câu trả lời cũng lệch.
-
----
+# 00-context.md — Context cá nhân + track
 
 ## 1. Bối cảnh AI20k (đọc, không sửa)
 
-Khóa **AI Thực Chiến** có ~500 học viên (sinh viên năm cuối + người đi làm), đang chuẩn bị cho giai đoạn 6 tuần thực chiến sau Day 28. Lab này do track Product (~80 học viên, nhóm 3) làm. Hoạt động cả khóa nằm trên Discord, LMS, lớp live, lab, nộp bài, coaching — ở quy mô ~500 người.
+Khóa **AI Thực Chiến** có ~500 học viên, nhưng bài này được làm cá nhân theo yêu cầu: không nhóm, không thảo luận nhóm. Lab Day 28 vẫn dùng logic PM/PO AI: nhận một yêu cầu công cụ AI lớn, tách nhỏ, chọn Quick Win, rồi viết AI Pilot Plan đủ để stakeholder quyết định pilot.
 
-Lãnh đạo chương trình muốn xây **AI20k Learning OS** — một hệ công cụ AI hỗ trợ học và vận hành khóa. Chính quy mô ~500 người là lý do **không build hết cùng lúc** được: mỗi nhóm nhận 1 track (1 công cụ lớn), tách nhỏ, chọn Quick Win, viết AI Pilot Plan để xin pilot.
+## 2. Track của tôi
 
-Việc của nhóm hôm nay đúng là việc một PM/PO AI làm ngoài doanh nghiệp thật: stakeholder giao một "công cụ AI" quá lớn — bạn phải tách nhỏ, chọn đúng phần làm trước, và bảo vệ lựa chọn bằng lập luận chứ không bằng slide đẹp.
-
----
-
-## 2. Track của nhóm (điền sau khi nhận track card)
-
-- **Track số / tên**: [...]
-- **Big Ask — chép nguyên văn câu yêu cầu trong track card**:
+- **Track số / tên**: Track tự chọn cho BEETUTOR Marketplace — Bộ máy matching + onboarding gia sư/học viên.
+- **Big Ask — chép nguyên văn câu yêu cầu trong track card / đề bài tự chọn**:
 
 ```text
-[...]
+Từ outline BEETUTOR Marketplace, xây một AI Pilot Plan cho công cụ AI giúp kết nối học viên với gia sư phù hợp, nhưng không build toàn bộ marketplace cùng lúc.
 ```
 
-- **Công cụ lớn này phục vụ ai** (học viên / coach / instructor / admin): [...]
-- **2 Red Flag đáng lo nhất (chép từ track card)**: 1. [...]  2. [...]
+- **Công cụ lớn này phục vụ ai**: Học viên/phụ huynh cần tìm gia sư, gia sư, đội vận hành BEETUTOR.
+- **2 Red Flag đáng lo nhất**: 1. Matching sai làm mất niềm tin hoặc gây rủi ro an toàn/riêng tư.  2. AI bịa năng lực, chứng chỉ, giá, lịch hoặc đưa đề xuất không giải thích được.
 
----
+## 3. Ràng buộc mọi track phải tôn trọng
 
-## 3. Ràng buộc mọi track phải tôn trọng (đọc, không sửa)
+- **Privacy** — hồ sơ học viên, khu vực, tuổi, lịch học, ngân sách và giấy tờ gia sư là dữ liệu nhạy cảm; trong lab chỉ dùng data mẫu/giả định.
+- **Human review** — output rủi ro cao như xác minh gia sư, khuyến nghị phù hợp cho trẻ vị thành niên, hoặc quyết định khóa tài khoản phải có người review.
+- **Citation** — nếu dựa trên hồ sơ, chứng chỉ, review hoặc chính sách nền tảng thì phải dẫn nguồn nội bộ; thiếu nguồn thì nói "không đủ dữ liệu".
+- **Budget nhỏ** — ưu tiên prototype bằng model/API sẵn có + dữ liệu riêng, không xây full marketplace.
+- **Formative ≠ summative** — điểm phù hợp do AI gợi ý chỉ là hỗ trợ quyết định, chưa thay thế duyệt của phụ huynh/học viên và đội vận hành.
+- **Adoption** — nếu học viên/ops không dùng trong workflow tìm gia sư thật thì pilot không có giá trị.
+- **Pilot đủ nhỏ** — chạy được với một lát cắt: Toán THPT online/offline tại TP.HCM.
 
-- **Privacy** — data học viên/submission/Discord nhạy cảm; trong lab dùng data mẫu/giả định, nói rõ dùng cái gì.
-- **Human review** — output rủi ro cao phải có người review, AI không tự quyết việc quan trọng.
-- **Citation** — trả lời dựa trên tài liệu khóa thì phải có nguồn; thiếu nguồn thì nói "không biết", không bịa.
-- **Budget nhỏ** — ưu tiên tool/API có sẵn, prototype nhanh, không xây platform lớn.
-- **Formative ≠ summative** — feedback/chấm bằng AI là formative, chưa phải điểm chính thức nếu chưa có người calibrate.
-- **Adoption** — tool không ai dùng = $0 dù accuracy 99%.
-- **Pilot đủ nhỏ** — chạy được trong bối cảnh khóa hiện tại.
+## 4. Ghi chú thêm
 
----
-
-## 4. Ghi chú thêm (tùy nhóm)
-
-[Hạn chót, quy mô data giả định nhóm dùng, ví dụ câu hỏi thật, bất kỳ thứ gì giúp AI hiểu context.]
-
----
-
-## Cách dùng
-
-```text
-1. Đầu buổi: điền mục 2 (+ mục 4 nếu cần). Mục 1 và 3 chỉ để đọc.
-2. Mỗi lần mở AI ở một bước: paste nguyên file này vào đầu chat trước.
-3. Chọn prompt trong ../prompts/ hợp bước đang làm, chỉnh lại theo track.
-4. Đọc kỹ bản nháp AI ra → sửa cho đúng context nhóm → lưu vào đúng file worksheet/.
-```
-
-Chỗ `[...]` là chỗ cần điền; điền xong xóa ngoặc nếu muốn.
+- Làm cá nhân, không có thành viên nhóm.
+- Nguồn sản phẩm chính: `BEETUTOR-MARKETPLACE.md`.
+- Data giả định cho pilot: 30 hồ sơ gia sư đã verify sơ bộ, 50 yêu cầu học Toán 10-12 ở TP.HCM, 20 lịch booking/thử học.
+- Mục tiêu pilot: giảm thời gian shortlist gia sư phù hợp và tăng tỷ lệ học viên đặt buổi học thử.

@@ -1,79 +1,64 @@
 ---
 artifact: 4 — Problem Framing (bản nộp phase Frame)
 bai-tap: Frame — đóng khung vấn đề thật
-phase: Double Diamond vòng 1 · ◆ output (chốt — owner xác nhận)
-time: ~13 phút (xem deck để biết khung giờ chính xác trong buổi)
-input: 2-quick-win.md · prompts/03-problem-framing-challenge.md
-nop-cuoi: Có — đây là bản nộp của phase Frame (Part A · A3 Working Canvas mục Problem Framing)
+phase: Double Diamond vòng 1 · ◆ output
+input: 2-quick-win.md · BEETUTOR-MARKETPLACE.md
+nop-cuoi: Có
 ---
 
 # 3 — FINAL: Problem Framing
 
-Mục tiêu: đóng khung Quick Win đã chọn cho thật cụ thể. Đây **không phải** bản đề xuất giải pháp — là tài liệu trả lời đúng 1 câu: *"nhóm đã hiểu đúng vấn đề chưa?"*. Đây là output chốt của [Double Diamond](https://www.thefountaininstitute.com/blog/what-is-the-double-diamond-design-process) vòng 1, và là một mục trong A3 Working Canvas nộp cuối buổi.
-
-Lý do làm bước này: một AI Pilot Plan cho vấn đề SAI — dù viết hay — vẫn sai. Đa số nhóm trượt Gate 3 vì khung chung chung ("học viên cần học tốt hơn", "coach quá tải") — câu đó không đo được, không ai chịu trách nhiệm, không biết khi nào thành công.
-
-Quy tắc: **pain phải có số.** "Nhiều người phàn nàn" không phải evidence. "200 câu hỏi/tuần × 20 phút = 67 giờ/tuần" mới là evidence. Trong lab dùng số giả định cũng được, nhưng phải nói rõ số đến từ đâu.
-
-## Quy trình 13 phút
-
-```text
-9 phút  — Điền 9 mục Problem Framing
-3 phút  — Tự phản biện
-1 phút  — Chốt: owner (giả định) có xác nhận đúng vấn đề không
-```
-
----
-
 ## 9 mục Problem Framing
 
-Câu hỏi phụ (tự trả lời trước khi điền):
+1. **Original Ask**: "Từ outline BEETUTOR Marketplace, xây một AI Pilot Plan cho công cụ AI giúp kết nối học viên với gia sư phù hợp, nhưng không build toàn bộ marketplace cùng lúc."
 
-- Một người ngoài đọc khung này có biết CHÍNH XÁC ai đau, đau cái gì không?
-- Nếu KHÔNG có baseline thì nhóm đo "tốt hơn" bằng cách nào?
-- Mục Open Questions trống = nguy hiểm (chưa nghĩ đủ). Nhóm còn chưa biết gì?
+2. **Reframed problem**: Phụ huynh/học viên cần tìm gia sư Toán THPT phải xử lý quá nhiều biến trước booking (môn/lớp, mục tiêu, lịch, khu vực, hình thức, ngân sách, loại gia sư, verification, rating). Ops cũng phải lọc thủ công nhiều hồ sơ để tạo shortlist, nên thời gian tư vấn dài và lý do đề xuất không nhất quán.
 
-### Trả lời
+3. **Current workflow**: Phụ huynh gửi nhu cầu qua form/chat. Ops đọc nhu cầu, hỏi thêm nếu thiếu thông tin, lọc danh sách gia sư theo môn/khu vực/lịch/giá, đọc từng hồ sơ, chọn 2-5 người phù hợp, rồi viết tin nhắn giải thích cho phụ huynh. Nếu phụ huynh không đồng ý, ops lặp lại bước lọc.
 
-1. **Original Ask** (stakeholder nói gì, nguyên văn): [...]
-2. **Reframed problem** (vấn đề thật sau khi tách): [...]
-3. **Current workflow** (hiện tại đang xử lý thế nào, kể cả "không ai làm gì"): [...]
-4. **Pain evidence — bằng SỐ** (ai đau · đau ở khoảnh khắc nào trong việc · tần suất · quy mô; số giả định ghi rõ nguồn giả định):
+4. **Pain evidence — bằng SỐ**:
 
 ```text
-[...]
+Giả định pilot để đo baseline (chưa có số thật):
+- 50 yêu cầu tìm gia sư Toán THPT/tháng trong giai đoạn đầu.
+- Ops mất trung bình 20 phút để đọc nhu cầu, lọc hồ sơ và viết shortlist 3 gia sư cho 1 yêu cầu.
+- Tổng thời gian: 50 x 20 phút = 1.000 phút = 16,7 giờ/tháng chỉ cho shortlist Toán THPT.
+- 30% yêu cầu bị hỏi lại ít nhất 1 lần vì thiếu lịch/ngân sách/khu vực, làm chậm phản hồi 0,5-1 ngày.
+- Nếu shortlist không có lý do rõ, phụ huynh khó tin và có thể yêu cầu thêm lựa chọn, tăng vòng tư vấn.
+Nguồn: số giả định cho lab, cần thay bằng log tư vấn/CRM thật trong tuần 0 của pilot.
 ```
 
-5. **Affected people** (ai dùng · ai quyết · ai là người review/expert): [...]
-6. **Constraints** (từ `00-context.md`: privacy / human review / citation / budget / formative / adoption): [...]
-7. **Quick Win đã chọn** (1 dòng, lấy từ file `2`): [...]
-8. **Open questions** (còn chưa biết gì — không được để trống): [...]
-9. **Validation** (đóng vai owner: *"đúng, đây là vấn đề đáng giải"* — Có / Chưa, vì sao):
+5. **Affected people**: Người dùng chính là phụ huynh/học viên lớp 10-12 cần gia sư Toán tại TP.HCM. Người review là ops/CS BEETUTOR. Người quyết approve/dừng pilot là product owner/ops lead. Gia sư bị ảnh hưởng vì hồ sơ của họ được đưa vào hoặc loại khỏi shortlist.
+
+6. **Constraints**: Privacy với hồ sơ học viên và giấy tờ gia sư; AI không được bịa chứng chỉ/rating/lịch; output shortlist phải có nguồn từ hồ sơ; gia sư liên quan học sinh vị thành niên nên ops phải review trước khi gửi; budget nhỏ, dùng data mẫu và model/API sẵn; pilot chỉ là hỗ trợ matching, không tự xác nhận booking.
+
+7. **Quick Win đã chọn**: AI tạo top 3 shortlist gia sư Toán THPT cho một yêu cầu học viên/phụ huynh, kèm lý do phù hợp và flag dữ liệu thiếu/rủi ro để ops review.
+
+8. **Open questions**:
+
+- Baseline thật về thời gian ops tạo shortlist là bao nhiêu phút/yêu cầu?
+- Có bao nhiêu hồ sơ gia sư đủ dữ liệu bắt buộc: môn/lớp, giá, lịch, khu vực, hình thức học, verification?
+- Phụ huynh coi yếu tố nào là bắt buộc: giới tính, loại gia sư, khoảng cách, rating, ngân sách, hay lịch?
+- Ngưỡng "vượt ngân sách" chấp nhận được là bao nhiêu: 0%, 10%, hay 20%?
+- Khi AI không tìm đủ 3 gia sư phù hợp, ops muốn nhận thông báo như thế nào?
+
+9. **Validation**:
 
 ```text
-[...]
+Owner giả định xác nhận: Có, đây là vấn đề đáng giải trước vì nó nằm ngay trước booking và ảnh hưởng trực tiếp đến conversion. Tuy nhiên owner yêu cầu pilot phải đo baseline thật ở tuần 0, không dùng số giả định làm evidence cuối. Owner cũng yêu cầu mọi shortlist do AI tạo đều có ops review và hiển thị lý do + nguồn từ hồ sơ.
 ```
-
----
 
 ## Tự phản biện
 
-- Khung này còn câu chung chung kiểu "cần học tốt hơn" không?
-- 3 câu sẽ bị hỏi: *số/giả định lấy ở đâu · giả định chính sai thì sao · tình huống nào khiến dừng.* Trả lời thử 1 câu.
-
----
+- Khung này tránh câu chung chung "matching tốt hơn" bằng cách tập trung vào một workflow: tạo shortlist 3 gia sư Toán THPT trước booking.
+- Nếu bị hỏi "số lấy ở đâu", câu trả lời là: số hiện tại là giả định lab để tính quy mô pain; pilot tuần 0 phải lấy số thật từ log tư vấn/CRM trong 1 tuần.
+- Nếu giả định chính sai (ops không mất 20 phút mà chỉ mất 5 phút), pilot vẫn có thể đo giá trị ở conversion/consistency; nếu cả thời gian và conversion đều không cải thiện thì dừng.
 
 ## Tổng kiểm tra trước khi sang `02-solution/`
 
 | Hạng mục | Xong? |
 |---|---|
-| Chỉ rõ 1 nhóm người + 1 khoảnh khắc cụ thể (không "user nói chung") | / |
-| Pain có số (hoặc kế hoạch lấy số), nói rõ số từ đâu | / |
-| Có baseline (hoặc cách đo baseline) + ≥1 chỉ số có ngưỡng | / |
-| Mục 9: owner (giả định) xác nhận đúng vấn đề = qua cổng phase Frame | / |
-
-⚑ Coach kiểm tra ở Mốc 2: *"Ai đau? Baseline là gì? Không có baseline thì đo thế nào?"*
-
-Owner chưa xác nhận → quay lại file `1`/`2`, đừng sang Solution. Owner xác nhận → mở `../02-solution/1-find-existing-solutions.md`.
-
-*Liên quan: handbook §A4 · `prompts/03-problem-framing-challenge.md`*
+| Chỉ rõ 1 nhóm người + 1 khoảnh khắc cụ thể | Xong |
+| Pain có số và nói rõ số từ đâu | Xong |
+| Có baseline hoặc cách đo baseline + chỉ số có ngưỡng | Xong |
+| Owner giả định xác nhận đúng vấn đề | Xong |
